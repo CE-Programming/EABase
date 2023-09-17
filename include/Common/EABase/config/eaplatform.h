@@ -617,6 +617,19 @@
 		#define EA_PLATFORM_WINRT 1 
 	#endif
 
+// TI 83+/84+ CE
+#elif defined(EA_PLATFORM_TICE) || defined(_EZ80)
+	#undef  EA_PLATFORM_TICE
+	#define EA_PLATFORM_TICE 1
+	#define EA_PLATFORM_NAME "TI-83+/84+ CE"
+	#define EA_PLATFORM_DESCRIPTION "TI-83+/84+ CE on eZ80"
+	#define EA_PROCESSOR_EZ80 1
+	#define EA_MISALIGNED_SUPPORT_LEVEL 2
+	#define EA_SYSTEM_LITTLE_ENDIAN 1
+	#define EA_PLATFORM_PTR_SIZE 3
+	#define EA_PLATFORM_MIN_MALLOC_ALIGNMENT 1
+	#define EA_PLATFORM_MOBILE 1
+
 // Sun (Solaris)
 // __SUNPRO_CC is defined by the Sun compiler.
 // __sun is defined by the GCC compiler.
