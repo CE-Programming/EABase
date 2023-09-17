@@ -96,7 +96,10 @@
 	#define EA_PLATFORM_DESKTOP 1
 #endif
 
-#if defined(EA_PLATFORM_PS4) || defined(__ORBIS__) || defined(EA_PLATFORM_KETTLE)
+#if defined(EA_PLATFORM_NAME)
+	// Custom platform
+
+#elif defined(EA_PLATFORM_PS4) || defined(__ORBIS__) || defined(EA_PLATFORM_KETTLE)
 	// PlayStation 4
 	// Orbis was Sony's code-name for the platform, which is now obsolete.
 	// Kettle was an EA-specific code-name for the platform, which is now obsolete.
