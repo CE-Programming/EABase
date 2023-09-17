@@ -574,11 +574,11 @@
 // signed equivalent to size_t.
 // This is defined by GCC (except the QNX implementation of GCC) but not by other compilers.
 //
-#if !defined(__GNUC__)
+#if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED)
+	#if !defined(__GNUC__)
 	// As of this writing, all non-GCC compilers significant to us implement 
 	// uintptr_t the same as size_t. However, this isn't guaranteed to be 
 	// so for all compilers, as size_t may be based on int, long, or long long.
-	#if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED)
 		#define _SSIZE_T_
 		#define _SSIZE_T_DEFINED
 
@@ -587,9 +587,9 @@
 		#else
 			typedef long ssize_t;
 		#endif
+	#else
+		#include <sys/types.h>
 	#endif
-#else
-	#include <sys/types.h>
 #endif
 
 
