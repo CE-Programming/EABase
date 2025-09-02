@@ -630,6 +630,12 @@
 	#define EA_PLATFORM_MIN_MALLOC_ALIGNMENT 1
 	#define EA_PLATFORM_MOBILE 1
 
+	#define EA_HAVE_CPP11_INITIALIZER_LIST 1
+	#define EA_HAVE_ALLOCA_H 1
+	#define EA_HAVE_INTTYPES_H 1
+
+	#define EA_COMPILER_NO_STRUCTURED_BINDING 1
+
 // Sun (Solaris)
 // __SUNPRO_CC is defined by the Sun compiler.
 // __sun is defined by the GCC compiler.
